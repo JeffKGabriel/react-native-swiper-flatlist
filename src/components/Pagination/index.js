@@ -15,6 +15,7 @@ export default class Pagination extends PureComponent {
     paginationStyle: ViewPropTypes.style,
 
     paginationStyleItem: ViewPropTypes.style
+
   };
 
   static defaultProps = {
@@ -25,6 +26,7 @@ export default class Pagination extends PureComponent {
     paginationStyle: {},
 
     paginationStyleItem: {}
+
   };
 
   render() {
@@ -37,6 +39,7 @@ export default class Pagination extends PureComponent {
       paginationStyle,
 
       paginationStyleItem
+
     } = this.props;
     return (
       <View style={[styles.container, paginationStyle]}>
@@ -47,7 +50,7 @@ export default class Pagination extends PureComponent {
               paginationStyleItem,
               paginationIndex === index
                 ? { backgroundColor: paginationActiveColor }
-                : { backgroundColor: paginationDefaultColor }
+                : { backgroundColor: paginationDefaultColor },
             ]}
             key={index}
             onPress={() => scrollToIndex(index)}
