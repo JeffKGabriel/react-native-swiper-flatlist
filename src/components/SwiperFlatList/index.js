@@ -169,7 +169,7 @@ export default class SwiperFlatList extends PureComponent {
       },
       keyExtractor: this._keyExtractor,
       horizontal: !vertical,
-      showsHorizontalScrollIndicator: false,
+      showsHorizontalScrollIndicator: true,
       showsVerticalScrollIndicator: false,
       pagingEnabled: true,
       ...props,

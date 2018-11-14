@@ -4,5 +4,5 @@ export const colors = {
   // primary: 'rgb(90, 170, 200)',
   primaryDark: 'rgb(15, 45, 90)',
   // primaryLight: 'rgb(45, 120, 210)',
-  black: '#000000',
+  black: '#000000'
 };
