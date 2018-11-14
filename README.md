@@ -20,8 +20,6 @@ or
 npm install react-native-swiper-flatlist --save
 ```
 
-Implemented using with FlatList
-
 ## Example
 
 ### Expo
@@ -84,28 +82,34 @@ const styles = StyleSheet.create({
 });
 ```
 
-[Example](./example/README.md)
+[Code example](./example/README.md)
 
 ## Props
 
-| Prop                   |                      Default                      |   Type   | Description                                                          |
-| :--------------------- | :-----------------------------------------------: | :------: | :------------------------------------------------------------------- |
-| data                   |        _not required if children is used_         | `array`  | Data to use in renderItem                                            |
-| children               |                         -                         |  `node`  | Children elements                                                    |
-| renderItem             |        _not required if children is used_         |  `func`  | Takes an item from data and renders it into the list                 |
-| onMomentumScrollEnd    |                         -                         |  `func`  | Called after scroll end and the first parameter is the current index |
-| vertical               |                       false                       |  `bool`  | Show vertical swiper                                                 |
-| index                  |                         0                         | `number` | Index to start                                                       |
-| renderAll              |                       false                       |  `bool`  | Render all the items before display it                               |
+| Prop                   |                      Default                      |         Type          | Description                                                          |
+| :--------------------- | :-----------------------------------------------: | :-------------------: | :------------------------------------------------------------------- |
+| data                   |        _not required if children is used_         |        `array`        | Data to use in renderItem                                            |
+| children               |                         -                         |        `node`         | Children elements                                                    |
+| renderItem             |        _not required if children is used_         |        `func`         | Takes an item from data and renders it into the list                 |
+| onMomentumScrollEnd    |                         -                         |        `func`         | Called after scroll end and the first parameter is the current index |
+| vertical               |                       false                       |        `bool`         | Show vertical swiper                                                 |
+| index                  |                         0                         |       `number`        | Index to start                                                       |
+| renderAll              |                       false                       |        `bool`         | Render all the items before display it                               |
 | **Pagination**         |
-| showPagination         |                       false                       |  `bool`  | Show pagination                                                      |
-| paginationDefaultColor |                       gray                        | `string` | Pagination color                                                     |
-| paginationActiveColor  |                       white                       | `string` | Pagination color                                                     |
-| PaginationComponent    | [Component](./src/components/Pagination/index.js) |  `node`  | Overwrite Pagination component                                       |
+| showPagination         |                       false                       |        `bool`         | Show pagination                                                      |
+| paginationDefaultColor |                       gray                        |       `string`        | Pagination color                                                     |
+| paginationActiveColor  |                       white                       |       `string`        | Pagination color                                                     |
+| paginationStyle        |                        {}                         | `ViewPropTypes.style` | Style object for container                                           |
+| paginationStyleItem    |                        {}                         | `ViewPropTypes.style` | Style object for item (dot)                                          |
+| PaginationComponent    | [Component](./src/components/Pagination/index.js) |        `node`         | Overwrite Pagination component                                       |
 | **Autoplay**           |
-| autoplay               |                       false                       |  `bool`  | Change index automatically                                           |
-| autoplayDelay          |                         3                         | `number` | Delay between every page                                             |
-| autoplayLoop           |                       false                       |  `bool`  | Continue playing after reach end                                     |
+| autoplay               |                       false                       |        `bool`         | Change index automatically                                           |
+| autoplayDelay          |                         3                         |       `number`        | Delay between every page                                             |
+| autoplayLoop           |                       false                       |        `bool`         | Continue playing after reach end                                     |
+
+**More props**
+
+This is a wrapper around [Flatlist](http://facebook.github.io/react-native/docs/flatlist.html#props), all their `props` works well and the inherited `props` too (from [ScrollView](http://facebook.github.io/react-native/docs/scrollview#props) and [VirtualizedList](http://facebook.github.io/react-native/docs/virtualizedlist#props))
 
 <!--
 autoplayDirection: PropTypes.bool.isRequired,  -->
