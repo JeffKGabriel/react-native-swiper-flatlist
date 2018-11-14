@@ -14,7 +14,8 @@ export default class Pagination extends PureComponent {
     paginationDefaultColor: PropTypes.string,
     paginationStyle: ViewPropTypes.style,
 
-    paginationStyleItem: ViewPropTypes.style,
+    paginationStyleItem: ViewPropTypes.style
+
   };
 
   static defaultProps = {
@@ -24,7 +25,8 @@ export default class Pagination extends PureComponent {
     paginationDefaultColor: colors.gray,
     paginationStyle: {},
 
-    paginationStyleItem: {},
+    paginationStyleItem: {}
+
   };
 
   render() {
@@ -36,7 +38,8 @@ export default class Pagination extends PureComponent {
       paginationActiveColor,
       paginationStyle,
 
-      paginationStyleItem,
+      paginationStyleItem
+
     } = this.props;
     return (
       <View style={[styles.container, paginationStyle]}>
